@@ -1,0 +1,222 @@
+/* 🌿 Tema Umum Rekapan AgroFerts */
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  background-color: #f3f8f3;
+  color: #1b3c1b;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2e7d32; /* hijau daun sawit */
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand .logo {
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff22;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2em;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.brand .muted {
+  font-size: 0.8em;
+  opacity: 0.9;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+.nav a.active {
+  border-bottom: 2px solid #c8e6c9;
+  padding-bottom: 2px;
+}
+
+/* === Kontainer utama === */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #2e7d32;
+  font-size: 1.3em;
+  border-bottom: 2px solid #a5d6a7;
+  padding-bottom: 6px;
+  text-align: center;
+}
+
+/* === Tabel Rekapan === */
+.rekap-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.9em;
+  min-width: 700px; /* biar tetap rapi kalau kolom banyak */
+}
+
+.rekap-table th,
+.rekap-table td {
+  border: 1px solid #c8e6c9;
+  padding: 8px 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.rekap-table th {
+  background-color: #2e7d32;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.rekap-table tr:nth-child(even) {
+  background-color: #f1f8e9;
+}
+
+.rekap-table tr:hover {
+  background-color: #e8f5e9;
+}
+
+/* === Tombol Aksi === */
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  font-size: 0.9em;
+}
+
+.btn:hover {
+  background-color: #256628;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+.btn.ghost:hover {
+  background: #2e7d32;
+  color: white;
+}
+
+.btn.warn {
+  border-color: #c62828;
+  color: #c62828;
+  background: transparent;
+}
+
+.btn.warn:hover {
+  background: #c62828;
+  color: white;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.85em;
+  color: #4b654b;
+  margin-top: 30px;
+}
+
+/* === Responsif Mobile === */
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+  }
+
+  .rekap-table {
+    font-size: 0.85em;
+    min-width: 600px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    margin-top: 5px;
+  }
+
+  .nav a {
+    margin: 0 8px 5px 0;
+    display: inline-block;
+  }
+
+  .brand h1 {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .rekap-table {
+    font-size: 0.8em;
+    min-width: 500px;
+  }
+
+  .card h2 {
+    font-size: 1.1em;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

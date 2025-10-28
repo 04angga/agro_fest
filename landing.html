@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palm EstiCalc</title>
+    <link rel="stylesheet" href="landing.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-section">
+        <img src="icon-512.png" alt="Logo" class="logo" />
+        <h1>Palm EstiCalc</h1>
+        <p>Estimasi Produksi</p>
+      </div>
+
+      <div class="menu-section">
+        <a href="akp.html" class="menu-btn">🌴 Kalkulator AKP</a>
+        <a href="rekapan.html" class="menu-btn">📊 Rekapan Estimasi</a>
+        <a href="tentang.html" class="menu-btn">ℹ️ Tentang Aplikasi</a>
+        <div class="motivasi">BEKERJA LAH DENGAN SEPENUH HATI</div>     
+      </div>
+  </body>
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("service-worker.js")
+      .then(() => console.log("SW registered successfully"))
+      .catch(err => console.warn("SW registration failed", err));
+  }
+</script>
+</html>

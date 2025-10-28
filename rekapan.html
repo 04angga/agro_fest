@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekapan AKP — AgroFerts</title>
+    <link rel="stylesheet" href="rekapan.css" />
+  </head>
+  <body class="dark">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">AF</div>
+        <div>
+          <h1>AgroFerts</h1>
+          <div class="muted">Rekapan AKP</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="landing.html">Beranda</a>
+        <a href="akp.html">AKP</a>
+        <a href="rekapan.html" class="active">Rekapan</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Rekapan Estimasi Produksi</h2>
+        <table class="rekap-table">
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Blok</th>
+              <th>AKP (%)</th>
+              <th>Janjang</th>
+              <th>Produksi (ton)</th>
+              <th>Tn Kerja</th>
+              <th>Truk</th>
+            </tr>
+          </thead>
+          <tbody id="rekapBody">
+            <tr>
+              <td colspan="7">Belum ada data tersimpan.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="row small">
+          <button id="clearAllBtn" class="btn ghost warn">
+            Hapus Semua Rekapan
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="rekapan.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AgroFerts — AKP Sensus</title>
+
+    <link rel="stylesheet" href="akp.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <a href="landing.html" class="logo">🌴</a>
+        <div class="logo">AF</div>
+        <h1>AgroFerts</h1>
+        <p class="subtitle">AKP — Sensus</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Data Blok & Sampel</h2>
+        <div class="grid-2">
+          <label>
+            Nama Blok
+            <input id="blokName" type="text" placeholder="Contoh: B-12" />
+          </label>
+          <label>
+            Total Pokok (N)
+            <input id="totalPokok" type="number" placeholder="SPH/blok" />
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label>
+            Pokok Disensus (sampel)
+            <input id="pokokSensus" type="number" placeholder="5%" />
+          </label>
+          <label>
+            BJR (kg/jjg)
+            <input id="bjr" type="number" step="0.1" placeholder="Contoh: 25" />
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Input Janjang Matang</h2>
+        <div class="counter-row">
+          <button id="kurangiBtn" class="mini">−</button>
+          <div class="counter-display">
+            <span id="janjangMatang">0</span> janjang
+          </div>
+          <button id="tambahBtn" class="mini">+</button>
+        </div>
+        <label>
+          Manual Override (opsional)
+          <input
+            id="manualJanjang"
+            type="number"
+            min="0"
+            placeholder="Masukkan total janjang"
+          />
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Parameter Perhitungan</h2>
+        <div class="grid-2">
+          <label>
+            Kapasitas Truk (ton)
+            <select id="kapasitasTruk">
+              <option value="2.5">2.5 ton</option>
+              <option value="4.8">4.8 ton</option>
+              <option value="6.0">6.0 ton</option>
+              <option value="8.0">8.0 ton</option>
+            </select>
+          </label>
+
+          <label>
+            Basis Panen (janjang/orang)
+            <input
+              id="basisPanen"
+              type="number"
+              min="1"
+              placeholder="janjang"
+              value="150"
+            />
+          </label>
+        </div>
+        <div class="row">
+          <button id="hitungAkp" class="btn">Hitung</button>
+        </div>
+        <div id="hasil" class="result-box">
+          Hasil AKP dan estimasi akan muncul di sini...
+        </div>
+        <button id="simpanRekapan">Simpan ke Rekapan</button>
+      </section>
+    </main>
+    <footer>
+      <p>🌴 AgroFerts — Bekerjalah Dengan Sepenuh Hati</p>
+      <p>copyright @anggasaputrainstiper</p>
+    </footer>
+    <script src="akp.js"></script>
+  </body>
+</html>
